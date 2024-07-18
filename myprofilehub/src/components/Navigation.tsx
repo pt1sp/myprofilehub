@@ -23,17 +23,17 @@ const Nav = styled.nav`
 `;
 
 const Navigation: React.FC = () => {
-    return (
-        <Nav>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/skills">Skills</Link></li>
-                <li><Link to="/projects">Projects</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-            </ul>
-        </Nav>
-    );
+  return (
+    <Nav>
+      <ul>
+        <li><Link to="/">ホーム</Link></li>
+        <li><Link to="/about">自己紹介</Link></li>
+        <li><Link to="/skills">スキル</Link></li>
+        <li><Link to="/projects">プロジェクト</Link></li>
+        <li><Link to="/contact">お問い合わせ</Link></li>
+      </ul>
+    </Nav>
+  );
 };
 
 export default Navigation;

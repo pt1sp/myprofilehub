@@ -37,31 +37,31 @@ const ProjectLink = styled.a`
 const Projects: React.FC = () => {
     const projects = [
         {
-            title: 'E-commerce Website',
-            description: 'A fully functional e-commerce platform built with React and Node.js.',
+            title: 'ECサイト',
+            description: 'ReactとNode.jsを使用して構築した完全に機能するECプラットフォーム。',
             link: 'https://github.com/yourusername/ecommerce-project',
         },
         {
-            title: 'Weather App',
-            description: 'A weather application that uses a third-party API to display current weather conditions.',
+            title: '天気アプリ',
+            description: 'サードパーティAPIを使用して現在の気象条件を表示する天気アプリケーション。',
             link: 'https://github.com/yourusername/weather-app',
         },
         {
-            title: 'Task Management System',
-            description: 'A full-stack application for managing tasks and projects, built with React and Django.',
+            title: 'タスク管理システム',
+            description: 'ReactとDjangoを使用して構築されたタスクとプロジェクトを管理するためのフルスタックアプリケーション。',
             link: 'https://github.com/yourusername/task-manager',
         },
     ];
 
     return (
         <ProjectsContainer>
-            <h2>My Projects</h2>
+            <h2>プロジェクト</h2>
             {projects.map((project, index) => (
                 <ProjectCard key={index}>
                     <ProjectTitle>{project.title}</ProjectTitle>
                     <ProjectDescription>{project.description}</ProjectDescription>
                     <ProjectLink href={project.link} target="_blank" rel="noopener noreferrer">
-                        View Project
+                        プロジェクトを見る
                     </ProjectLink>
                 </ProjectCard>
             ))}

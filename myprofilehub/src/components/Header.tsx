@@ -11,7 +11,7 @@ const HeaderContainer = styled.header`
 const Header: React.FC = () => {
     return (
         <HeaderContainer>
-            <h1>Your Name</h1>
+            <h1>横山 龍之介</h1>
             <Navigation />
         </HeaderContainer>
     );

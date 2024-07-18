@@ -53,66 +53,66 @@ const SubmitButton = styled.button`
 `;
 
 const Contact: React.FC = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        // ここでフォームの送信処理を実装します
-        console.log('Form submitted:', { name, email, message });
-        // フォームをリセット
-        setName('');
-        setEmail('');
-        setMessage('');
-        // 成功メッセージを表示するなどの処理を追加できます
-    };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // ここでフォームの送信処理を実装します
+    console.log('フォーム送信:', { name, email, message });
+    // フォームをリセット
+    setName('');
+    setEmail('');
+    setMessage('');
+    // 成功メッセージを表示するなどの処理を追加できます
+  };
 
-    return (
-        <ContactContainer>
-            <h2>Contact Me</h2>
-            <ContactInfo>
-                <p>Feel free to get in touch with me. Here's how you can reach me:</p>
-                <ul>
-                    <li>Email: your.email@example.com</li>
-                    <li>Phone: (123) 456-7890</li>
-                    <li>Location: City, Country</li>
-                </ul>
-            </ContactInfo>
-            <ContactForm onSubmit={handleSubmit}>
-                <FormGroup>
-                    <Label htmlFor="name">Name:</Label>
-                    <Input
-                        type="text"
-                        id="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                    />
-                </FormGroup>
-                <FormGroup>
-                    <Label htmlFor="email">Email:</Label>
-                    <Input
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </FormGroup>
-                <FormGroup>
-                    <Label htmlFor="message">Message:</Label>
-                    <TextArea
-                        id="message"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        required
-                    />
-                </FormGroup>
-                <SubmitButton type="submit">Send Message</SubmitButton>
-            </ContactForm>
-        </ContactContainer>
-    );
+  return (
+    <ContactContainer>
+      <h2>お問い合わせ</h2>
+      <ContactInfo>
+        <p>お気軽にご連絡ください。以下の方法でお問い合わせいただけます：</p>
+        <ul>
+          <li>メール: your.email@example.com</li>
+          <li>電話: 090-1234-5678</li>
+          <li>所在地: 〒123-4567 東京都渋谷区...</li>
+        </ul>
+      </ContactInfo>
+      <ContactForm onSubmit={handleSubmit}>
+        <FormGroup>
+          <Label htmlFor="name">お名前：</Label>
+          <Input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="email">メールアドレス：</Label>
+          <Input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="message">メッセージ：</Label>
+          <TextArea
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+          />
+        </FormGroup>
+        <SubmitButton type="submit">送信</SubmitButton>
+      </ContactForm>
+    </ContactContainer>
+  );
 };
 
 export default Contact;

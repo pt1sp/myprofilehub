@@ -38,13 +38,13 @@ const CTAButton = styled(Link)`
 const Home: React.FC = () => {
     return (
         <HomeContainer>
-            <Title>Welcome to My Portfolio</Title>
-            <Subtitle>Web Developer & Designer</Subtitle>
+            <Title>ポートフォリオへようこそ</Title>
+            <Subtitle>ウェブ開発者 & デザイナー</Subtitle>
             <p>
-                Hi, I'm [Your Name]. I specialize in creating beautiful and functional websites.
-                With a passion for clean code and user-centric design, I bring ideas to life in the digital world.
+                はじめまして、横山龍之介です。美しく機能的なウェブサイトの制作を専門としています。
+                クリーンなコードとユーザー中心のデザインに情熱を持ち、デジタルの世界でアイデアを形にしています。
             </p>
-            <CTAButton to="/projects">View My Projects</CTAButton>
+            <CTAButton to="/projects">プロジェクトを見る</CTAButton>
         </HomeContainer>
     );
 };

@@ -29,22 +29,22 @@ const SkillItem = styled.li`
 const Skills: React.FC = () => {
     const skillCategories = [
         {
-            name: 'Frontend',
-            skills: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Vue.js'],
+            name: 'フロントエンド',
+            skills: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript'],
         },
         {
-            name: 'Backend',
-            skills: ['Node.js', 'Express', 'Python', 'Django', 'SQL'],
+            name: 'バックエンド',
+            skills: ['PHP', 'Python', 'MySQL', 'Java'],
         },
         {
-            name: 'Tools & Others',
-            skills: ['Git', 'Docker', 'AWS', 'Figma', 'Agile Methodologies'],
+            name: 'ツール & その他',
+            skills: ['Git', 'Docker', 'AWS', 'Notion', 'Slack'],
         },
     ];
 
     return (
         <SkillsContainer>
-            <h2>My Skills</h2>
+            <h2>スキルセット</h2>
             {skillCategories.map((category) => (
                 <SkillCategory key={category.name}>
                     <h3>{category.name}</h3>
