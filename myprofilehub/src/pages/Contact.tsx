@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const ContactContainer = styled.div`
   max-width: 800px;
@@ -53,18 +53,18 @@ const SubmitButton = styled.button`
 `;
 
 const Contact: React.FC = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // ここでフォームの送信処理を実装します
-    console.log('フォーム送信:', { name, email, message });
+    console.log("フォーム送信:", { name, email, message });
     // フォームをリセット
-    setName('');
-    setEmail('');
-    setMessage('');
+    setName("");
+    setEmail("");
+    setMessage("");
     // 成功メッセージを表示するなどの処理を追加できます
   };
 
@@ -74,9 +74,8 @@ const Contact: React.FC = () => {
       <ContactInfo>
         <p>お気軽にご連絡ください。以下の方法でお問い合わせいただけます：</p>
         <ul>
-          <li>メール: your.email@example.com</li>
-          <li>電話: 090-1234-5678</li>
-          <li>所在地: 〒123-4567 東京都渋谷区...</li>
+          <li>メール: fcz53eiswy@gmail.com</li>
+          <li>電話: 090-xxxx-xxx</li>
         </ul>
       </ContactInfo>
       <ContactForm onSubmit={handleSubmit}>

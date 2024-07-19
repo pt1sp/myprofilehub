@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const ProjectsContainer = styled.div`
   max-width: 800px;
@@ -35,38 +35,44 @@ const ProjectLink = styled.a`
 `;
 
 const Projects: React.FC = () => {
-    const projects = [
-        {
-            title: 'ECサイト',
-            description: 'ReactとNode.jsを使用して構築した完全に機能するECプラットフォーム。',
-            link: 'https://github.com/yourusername/ecommerce-project',
-        },
-        {
-            title: '天気アプリ',
-            description: 'サードパーティAPIを使用して現在の気象条件を表示する天気アプリケーション。',
-            link: 'https://github.com/yourusername/weather-app',
-        },
-        {
-            title: 'タスク管理システム',
-            description: 'ReactとDjangoを使用して構築されたタスクとプロジェクトを管理するためのフルスタックアプリケーション。',
-            link: 'https://github.com/yourusername/task-manager',
-        },
-    ];
+  const projects = [
+    {
+      title: "自動集計システム",
+      description:
+        "Pythonと画像認識を使ってチームの得点を自動集計するシステム。",
+      link: "https://github.com/pt1sp/auto-calculation",
+    },
+    {
+      title: "(古)自己紹介サイト",
+      description: "ReactとJavaScriptを使った、自己紹介サイト。",
+      link: "https://github.com/pt1sp/myprofile-site",
+    },
+    {
+      title: "タスク管理システム",
+      description:
+        "ReactとDjangoを使用して構築されたタスクとプロジェクトを管理するためのフルスタックアプリケーション。",
+      link: "https://github.com/yourusername/task-manager",
+    },
+  ];
 
-    return (
-        <ProjectsContainer>
-            <h2>プロジェクト</h2>
-            {projects.map((project, index) => (
-                <ProjectCard key={index}>
-                    <ProjectTitle>{project.title}</ProjectTitle>
-                    <ProjectDescription>{project.description}</ProjectDescription>
-                    <ProjectLink href={project.link} target="_blank" rel="noopener noreferrer">
-                        プロジェクトを見る
-                    </ProjectLink>
-                </ProjectCard>
-            ))}
-        </ProjectsContainer>
-    );
+  return (
+    <ProjectsContainer>
+      <h2>プロジェクト</h2>
+      {projects.map((project, index) => (
+        <ProjectCard key={index}>
+          <ProjectTitle>{project.title}</ProjectTitle>
+          <ProjectDescription>{project.description}</ProjectDescription>
+          <ProjectLink
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            プロジェクトを見る
+          </ProjectLink>
+        </ProjectCard>
+      ))}
+    </ProjectsContainer>
+  );
 };
 
 export default Projects;

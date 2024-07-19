@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const HomeContainer = styled.div`
   max-width: 800px;
@@ -36,17 +36,20 @@ const CTAButton = styled(Link)`
 `;
 
 const Home: React.FC = () => {
-    return (
-        <HomeContainer>
-            <Title>ポートフォリオへようこそ</Title>
-            <Subtitle>ウェブ開発者 & デザイナー</Subtitle>
-            <p>
-                はじめまして、横山龍之介です。美しく機能的なウェブサイトの制作を専門としています。
-                クリーンなコードとユーザー中心のデザインに情熱を持ち、デジタルの世界でアイデアを形にしています。
-            </p>
-            <CTAButton to="/projects">プロジェクトを見る</CTAButton>
-        </HomeContainer>
-    );
+  return (
+    <HomeContainer>
+      <Title>ポートフォリオへようこそ</Title>
+      <Subtitle>ウェブ開発者</Subtitle>
+      <p>
+        はじめまして、横山龍之介です。将来、美しく機能的な
+        ウェブアプリケーションを制作できるエンジニアになることを目指して、
+        現在専門学校で勉強中です。
+        デジタルの世界でアイデアを形にする方法を日々習得しています。
+        まだ勉強中の身ですが、将来はプロのウェブ開発者として活躍したいと考えています。
+      </p>
+      <CTAButton to="/projects">プロジェクトを見る</CTAButton>
+    </HomeContainer>
+  );
 };
 
 export default Home;

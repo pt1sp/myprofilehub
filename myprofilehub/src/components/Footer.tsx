@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const FooterContainer = styled.footer`
   background-color: #333;
@@ -31,7 +31,7 @@ const SocialLinks = styled.div`
     color: white;
     margin-left: 1rem;
     text-decoration: none;
-    
+
     &:hover {
       text-decoration: underline;
     }
@@ -53,7 +53,7 @@ const FooterNav = styled.nav`
   a {
     color: white;
     text-decoration: none;
-    
+
     &:hover {
       text-decoration: underline;
     }
@@ -61,27 +61,45 @@ const FooterNav = styled.nav`
 `;
 
 const Footer: React.FC = () => {
-    const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
-    return (
-        <FooterContainer>
-            <FooterContent>
-                <Copyright>&copy; {currentYear} Your Name. All rights reserved.</Copyright>
-                <SocialLinks>
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a>
-                </SocialLinks>
-                <FooterNav>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                    </ul>
-                </FooterNav>
-            </FooterContent>
-        </FooterContainer>
-    );
+  return (
+    <FooterContainer>
+      <FooterContent>
+        <Copyright>
+          &copy; {currentYear} Yokoyama Ryunosuke. All rights reserved.
+        </Copyright>
+        <SocialLinks>
+          <a
+            href="https://github.com/pt1sp/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            Twitter
+          </a>
+        </SocialLinks>
+        <FooterNav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </FooterNav>
+      </FooterContent>
+    </FooterContainer>
+  );
 };
 
 export default Footer;
